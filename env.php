@@ -3,10 +3,10 @@ if(!isset($GLOBALS['on'])){
     die("You do not have permission to read this file");
 }
 
-$host='localhost';
-$user='root';
+$host='';
+$user='';
 $pass='';
-$db='test';
+$db='';
 
 $jsdirectory="/views/js/";
 $jsbundle=array("/jquery.min.js","bootstrap.min.js");
