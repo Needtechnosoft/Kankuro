@@ -9,12 +9,15 @@
 $GLOBALS['on']=true;
 require "env.php";
 require "controller.php";
+require "routes.php";
 $s=$_SERVER['REQUEST_URI'];
 $arr=explode("/",$s);
 
 if($_SERVER['REQUEST_METHOD']==="POST"){
+    $route->ispost($s);
 post($arr[1]);
 }else{
+$route->isget($s);
 if(count($arr)>2){
     getwithargs($arr[1],array_slice($arr,2,count($arr)-2));
 }else{
